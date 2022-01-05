@@ -8,6 +8,14 @@ fn main() {
     ];
     for coin in coins {
         println!("Value of {:?} is {}", coin, value_in_cents(&coin));
+        if let Coin::Quarter(state) = coin {
+            println!("Have you been to {:?}?", state);
+        } else if let Coin::Penny = coin {
+            println!("That's not much");
+        } else if let Coin::Nickel = coin {
+            println!("Better but still...");
+        }
+        println!("{}", "-".repeat(30));
     }
 }
 
