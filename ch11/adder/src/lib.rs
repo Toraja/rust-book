@@ -28,6 +28,16 @@ mod tests {
     }
 
     #[test]
+    fn add_three_and_two() {
+        assert_eq!(5, add_two(3));
+    }
+
+    #[test]
+    fn one_hundred() {
+        assert_eq!(102, add_two(100));
+    }
+
+    #[test]
     fn greeting_contains_name() {
         let result = greeting("Carol");
         assert!(
@@ -44,5 +54,11 @@ mod tests {
         } else {
             Err(String::from("two plus two does not equal 4"))
         }
+    }
+
+    #[test]
+    #[ignore]
+    fn expensive_test() {
+        println!("This is pretty expensive test");
     }
 }
